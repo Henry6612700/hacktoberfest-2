@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>Hacktoberfest 2017 - DigitalOcean</title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <meta name="description" content="Hacktoberfest is a month-long celebration of open source software.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@digitalocean">
+<meta name="twitter:creator" content="@digitalocean">
+<meta name="twitter:title" content="Hacktoberfest 2017 - DigitalOcean">
+<meta name="twitter:description" content="Hacktoberfest is a month-long celebration of open source software.">
+<meta name="twitter:image" content="https://hacktoberfest.digitalocean.com/assets/hacktoberfest-2017-social-card-894a0558dba205f7142f3130c06823d72427a9d751d0f8c7db8a0079397178aa.jpg">
+
+<meta name="og:title" content="Hacktoberfest 2017 - DigitalOcean">
+<meta name="og:description" content="Hacktoberfest is a month-long celebration of open source software.">
+<meta name="og:site_name" content="DigitalOcean">
+<meta property="og:url" content="https://hacktoberfest.digitalocean.com/">
+<meta property="og:image" content="https://hacktoberfest.digitalocean.com/assets/hacktoberfest-2017-social-card-894a0558dba205f7142f3130c06823d72427a9d751d0f8c7db8a0079397178aa.jpg">
+
+<meta itemprop="name" content="Hacktoberfest 2017 - DigitalOcean">
+<meta itemprop="description" content="Hacktoberfest is a month-long celebration of open source software.">
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68219300-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    
+
+    <script src="//cdn.ravenjs.com/1.1.2/jquery,native/raven.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,matchMedia,Element.prototype.placeholder,Array.prototype.includes"></script>
+    <script type="text/javascript" src="https://use.typekit.net/csy1quj.js"></script>
+    <script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <script
+        src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js"
+        data-apikey="93a50b362367051fe337ab1aad774079">
+    </script>
+    <link rel="stylesheet" media="all" href="/assets/application-6c40d36d9f8c1af493934350e758d308afb1d77451276b069871de4dff6e2f71.css" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="FKe+GcBOzfbWz2QqdQxXaUIOjED8ZIax9LbeuGblRiHUsKBxj3hHXrGCvC+bytFOXXyv1+f+4N2DRVIHo2PrPQ==" />
+  </head>
+  <body>
+    
+<div class="Container">
+  <nav class="TopNav">
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 603 103" role="img" aria-labelledby="s37o96v5w0qup83324gnuptvtmssrt3" class="TopNav-logo"><title id="s37o96v5w0qup83324gnuptvtmssrt3">DigitalOcean</title><style>.st0,.st1{fill:#fff}.st1{fill-rule:evenodd;clip-rule:evenodd}</style><g id="XMLID_2369_"><g id="XMLID_2638_"><g id="XMLID_2639_"><g id="XMLID_44_"><g id="XMLID_48_"><path id="XMLID_49_" class="st0" d="M52.1 102.1V82.5c20.8 0 36.8-20.6 28.9-42.4-3-8.1-9.4-14.6-17.5-17.5-21.8-7.9-42.4 8.1-42.4 28.9H1.5c0-33.1 32-58.9 66.7-48.1 15.2 4.7 27.2 16.8 31.9 31.9 10.8 34.8-14.9 66.8-48 66.8z"></path></g><path id="XMLID_47_" class="st1" d="M52.1 82.5H32.6V63h19.5z"></path><path id="XMLID_46_" class="st1" d="M32.6 97.5h-15v-15h15v15z"></path><path id="XMLID_45_" class="st1" d="M17.6 82.5H5V70h12.6v12.5z"></path></g></g></g><g id="XMLID_2370_"><path id="XMLID_2635_" class="st0" d="M181.5 30.2c-5.8-4-13-6.1-21.4-6.1h-18.3v58.1h18.3c8.4 0 15.6-2.1 21.4-6.4 3.2-2.2 5.7-5.4 7.4-9.3 1.7-3.9 2.6-8.5 2.6-13.7 0-5.1-.9-9.7-2.6-13.6-1.7-3.8-4.2-6.9-7.4-9zm-29 3.8h5.8c6.4 0 11.7 1.3 15.7 3.7 4.4 2.7 6.7 7.8 6.7 15.1 0 7.6-2.3 12.9-6.7 15.8-3.8 2.5-9.1 3.8-15.6 3.8h-5.8V34z"></path><path id="XMLID_2634_" class="st0" d="M204.3 23.4c-1.8 0-3.3.6-4.5 1.8-1.2 1.2-1.9 2.7-1.9 4.4 0 1.8.6 3.3 1.9 4.5 1.2 1.2 2.7 1.9 4.5 1.9 1.8 0 3.3-.6 4.5-1.9 1.2-1.2 1.9-2.8 1.9-4.5 0-1.8-.6-3.3-1.9-4.4-1.2-1.2-2.8-1.8-4.5-1.8z"></path><path id="XMLID_2564_" class="st0" d="M199 41.3h10.3v41H199z"></path><path id="XMLID_2561_" class="st0" d="M246.8 44.7c-3.1-2.8-6.6-4.4-10.3-4.4-5.7 0-10.4 2-14.1 5.8-3.7 3.8-5.5 8.8-5.5 14.7 0 5.8 1.8 10.7 5.5 14.7 3.7 3.8 8.4 5.8 14.1 5.8 4 0 7.4-1.1 10.2-3.3v1c0 3.4-.9 6-2.7 7.9-1.8 1.8-4.3 2.7-7.4 2.7-4.8 0-7.7-1.9-11.4-6.8l-7 6.7.2.3c1.5 2.1 3.8 4.2 6.9 6.2 3.1 2 6.9 3 11.5 3 6.1 0 11.1-1.9 14.7-5.6 3.7-3.7 5.5-8.7 5.5-14.9V41.3h-10.1v3.4zm-2.7 24.2c-1.8 2-4.1 3-7.1 3s-5.3-1-7-3c-1.8-2-2.7-4.7-2.7-8s.9-6.1 2.7-8.1c1.8-2 4.1-3.1 7-3.1 3 0 5.3 1 7.1 3.1 1.8 2 2.7 4.8 2.7 8.1s-1 6-2.7 8z"></path><path id="XMLID_2560_" class="st0" d="M265.7 41.3H276v41h-10.3z"></path><path id="XMLID_2552_" class="st0" d="M271 23.4c-1.8 0-3.3.6-4.5 1.8-1.2 1.2-1.9 2.7-1.9 4.4 0 1.8.6 3.3 1.9 4.5 1.2 1.2 2.7 1.9 4.5 1.9 1.8 0 3.3-.6 4.5-1.9 1.2-1.2 1.9-2.8 1.9-4.5 0-1.8-.6-3.3-1.9-4.4-1.2-1.2-2.8-1.8-4.5-1.8z"></path><path id="XMLID_2509_" class="st0" d="M298.6 30.3h-10.1v11.1h-5.9v9.4h5.9v17c0 5.3 1.1 9.1 3.2 11.3 2.1 2.2 5.8 3.3 11.1 3.3 1.7 0 3.4-.1 5-.2h.5v-9.4l-3.5.2c-2.5 0-4.1-.4-4.9-1.3-.8-.9-1.2-2.7-1.2-5.4V50.7h9.6v-9.4h-9.6v-11z"></path><path id="XMLID_2508_" class="st0" d="M356.5 24.1h10.3v58.1h-10.3z"></path><path id="XMLID_2470_" class="st0" d="M470.9 67.6c-1.8 2.1-3.7 3.9-5.2 4.8-1.4.9-3.2 1.4-5.3 1.4-3 0-5.5-1.1-7.5-3.4s-3-5.2-3-8.7 1-6.4 2.9-8.6c2-2.3 4.4-3.4 7.4-3.4 3.3 0 6.8 2.1 9.8 5.6l6.8-6.5c-4.4-5.8-10.1-8.5-16.9-8.5-5.7 0-10.6 2.1-14.6 6.1-4 4-6 9.2-6 15.3s2 11.2 6 15.3c4 4.1 8.9 6.1 14.6 6.1 7.5 0 13.5-3.2 17.5-9.1l-6.5-6.4z"></path><path id="XMLID_2460_" class="st0" d="M513.2 47c-1.5-2-3.5-3.7-5.9-4.9-2.5-1.2-5.3-1.8-8.5-1.8-5.8 0-10.5 2.1-14 6.3-3.4 4.2-5.2 9.3-5.2 15.4 0 6.2 1.9 11.3 5.7 15.3 3.7 3.9 8.8 5.9 14.9 5.9 6.9 0 12.7-2.8 16.9-8.4l.2-.3-6.7-6.5c-.6.8-1.5 1.6-2.3 2.4-1 1-2 1.7-3 2.2-1.5.8-3.3 1.1-5.2 1.1-2.9 0-5.2-.8-7-2.5-1.7-1.5-2.7-3.6-2.9-6.2h27.3l.1-3.8c0-2.7-.4-5.2-1.1-7.6-.7-2.3-1.8-4.5-3.3-6.6zm-22.5 9.7c.5-2 1.4-3.6 2.7-4.9 1.4-1.4 3.2-2.1 5.4-2.1 2.5 0 4.4.7 5.7 2.1 1.2 1.3 1.9 2.9 2.1 4.8h-15.9z"></path><path id="XMLID_2456_" class="st0" d="M552.8 44.4c-3.1-2.7-7.4-4-12.8-4-3.4 0-6.6.8-9.5 2.2-2.7 1.4-5.3 3.6-7 6.6l.1.1 6.6 6.3c2.7-4.3 5.7-5.8 9.7-5.8 2.2 0 3.9.6 5.3 1.7s2 2.6 2 4.4v2c-2.6-.8-5.1-1.2-7.6-1.2-5.1 0-9.3 1.2-12.4 3.6-3.1 2.4-4.7 5.9-4.7 10.2 0 3.8 1.3 7 4 9.3 2.7 2.2 6 3.4 9.9 3.4 3.9 0 7.6-1.6 10.9-4.3v3.4h10.1V55.9c.2-4.9-1.4-8.8-4.6-11.5zm-18.3 22.2c1.2-.8 2.8-1.2 4.9-1.2 2.5 0 5.1.5 7.8 1.5v4C545 73 542 74 538.3 74c-1.8 0-3.2-.4-4.1-1.2-.9-.8-1.4-1.7-1.4-3s.6-2.4 1.7-3.2z"></path><path id="XMLID_2454_" class="st0" d="M597.2 45.2c-2.9-3.2-6.9-4.8-12-4.8-4.1 0-7.4 1.2-9.9 3.5v-2.5h-10.1v41h10.3V59.7c0-3.1.7-5.6 2.2-7.3 1.5-1.8 3.4-2.6 6.1-2.6 2.3 0 4.1.8 5.4 2.3 1.3 1.6 2 3.7 2 6.4v23.7h10.3V58.5c0-5.6-1.4-10.1-4.3-13.3z"></path><path id="XMLID_2450_" class="st0" d="M343.6 44.4c-3.1-2.7-7.4-4-12.8-4-3.4 0-6.6.8-9.5 2.2-2.7 1.4-5.3 3.6-7 6.6l.1.1 6.6 6.3c2.7-4.3 5.7-5.8 9.7-5.8 2.2 0 3.9.6 5.3 1.7s2 2.6 2 4.4v2c-2.6-.8-5.1-1.2-7.6-1.2-5.1 0-9.3 1.2-12.4 3.6-3.1 2.4-4.7 5.9-4.7 10.2 0 3.8 1.3 7 4 9.3 2.7 2.2 6 3.4 9.9 3.4 3.9 0 7.6-1.6 10.9-4.3v3.4h10.1V55.9c.1-4.9-1.5-8.8-4.6-11.5zm-18.3 22.2c1.2-.8 2.8-1.2 4.9-1.2 2.5 0 5.1.5 7.8 1.5v4c-2.2 2.1-5.2 3.1-8.9 3.1-1.8 0-3.2-.4-4.1-1.2-.9-.8-1.4-1.7-1.4-3s.5-2.4 1.7-3.2z"></path><path id="XMLID_2371_" class="st0" d="M404.2 83.1c-16.5 0-30-13.4-30-30s13.4-30 30-30c16.5 0 30 13.4 30 30s-13.5 30-30 30zm0-49.3c-10.7 0-19.4 8.7-19.4 19.4s8.7 19.4 19.4 19.4 19.4-8.7 19.4-19.4-8.7-19.4-19.4-19.4z"></path></g></g></svg>
+
+</a>
+    <div class="TopNav-links">
+      <a class="TopNav-link" href="/#projects">Hacktoberfest Projects</a>
+
+      <a class="TopNav-link" href="/#details">Details</a>
+
+      <a class="TopNav-link" href="/#resources">Resources</a>
+
+        <a class="TopNav-link" href="/sign_up/register">Sign up</a>
+    </div>
+  </nav>
+</div>
+
+
+<main>
+  <header class="PageHeader u-contrast">
+    <div class="Container PageHeader-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="626" height="145" viewBox="0 0 626 145" role="img" aria-labelledby="dyn2wm4vin1xgraye3ggy9kf12oaz8a" class="Logo--small"><title id="dyn2wm4vin1xgraye3ggy9kf12oaz8a">Hacktoberfest</title><defs><filter x="-5.2%" y="-26.4%" width="110.5%" height="156.4%" filterUnits="objectBoundingBox" id="hacktoberfest-logo-filter"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0.0543056342 0 0 0 0 0.0216903168 0 0 0 0 0.140306122 0 0 0 0.542204484 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g filter="url(#hacktoberfest-logo-filter)" transform="translate(18 15)" fill="none" fill-rule="evenodd"><polygon fill="#FF625F" points="254.825045 32.8595485 242.037834 32.8595485 242.037834 23.2628287 219.660869 45.6548844 229.251494 45.6548844 229.251494 103.232588 235.644664 109.630692 242.037834 103.232588 251.62846 93.6358686 248.431004 90.4372525 242.037834 96.8353562 242.037834 45.6548844"></polygon><polygon fill="#FF9566" points="232.389896 106.374205 235.643967 109.630343 242.038008 103.233111 251.628634 93.6363915 248.431178 90.4377754 242.038008 96.8358791"></polygon><polygon fill="#FF9566" points="463.583556 23.263003 463.583556 23.263003 463.583556 10.4676672 450.795474 23.263003 450.795474 36.0583389 441.205719 45.6541871 450.795474 45.6541871 450.795474 103.232763 457.189515 109.630866 463.583556 103.232763 463.583556 45.6541871 476.370766 32.8597228 463.583556 32.8597228"></polygon><polygon fill="#FF625F" points="441.205458 45.6545357 450.796083 45.6545357 463.583294 45.6545357 476.370505 32.8591999 450.796083 32.8591999"></polygon><polygon fill="#FF625F" points="482.763501 10.4680158 473.172875 0.871296046 463.58312 10.4680158 473.172875 20.0647356"></polygon><polygon fill="#FF625F" points="320.861438 42.4560068 320.861438 32.859287 320.861438 16.8653351 311.270812 7.26861535 301.681057 16.8653351 308.074227 23.2634388 308.074227 96.8359663 320.861438 109.630431 330.452064 100.033711 320.861438 90.4378626"></polygon><polygon fill="#FF9566" points="320.861438 42.4560068 320.861438 32.859287 320.861438 16.8653351 308.074227 23.2634388 308.074227 96.8359663 320.861438 90.4378626"></polygon><polygon fill="#FF625F" points="320.861438 42.4560068 330.452064 52.0527266 330.452064 100.033711 343.238404 87.2392465 343.238404 45.6546229 330.452064 32.859287"></polygon><polygon fill="#FF625F" points="67.1776697 96.186133 60.4596153 89.4638099 60.4596153 79.3816326 60.4596153 28.9655167 60.4596153 15.5217421 60.4596153 12.1610163 50.3829692 2.07709586 40.3063231 12.1610163 47.0243775 18.8833394 47.0243775 35.6050418 30.3124224 52.3276158 30.3124224 28.9655167 30.3124224 12.1610163 20.2357763 2.07709586 20.1948391 2.11893063 20.1530309 2.07709586 0.00060970285 22.2440652 3.44194679 25.6875889 13.5185929 15.60454 16.8771846 18.9652658 16.8771846 102.908456 23.595239 109.630779 30.3124224 102.908456 30.3124224 66.8111586 47.0243775 50.0885846 47.0243775 79.3816326 47.0243775 96.186133 60.4596153 109.630779 67.1776697 102.908456 70.5362614 99.5468588 77.2543158 92.8254072 73.8957241 89.4638099"></polygon><polygon fill="#FF9566" points="60.4597024 89.4639842 60.4597024 79.3818069 60.4597024 28.965691 60.4597024 15.5219164 60.4597024 12.1611906 47.0244646 18.8835137 47.0244646 35.6052161 47.0244646 50.0887589 47.0244646 79.3818069 47.0244646 96.1863073"></polygon><polygon fill="#FF625F" points="578.593546 96.8356177 578.593546 45.6542743 591.380757 32.85981 578.594417 32.85981 578.594417 23.2630902 556.216581 45.6542743 565.806335 45.6542743 565.806335 103.23285 572.200376 109.630953 578.593546 103.23285 588.184172 93.63613 584.987587 90.4375139"></polygon><polygon fill="#FF9566" points="578.593546 96.8356177 578.593546 45.6542743 565.806335 45.6542743 565.806335 103.23285 569.31474 106.742612"></polygon><polygon fill="#FF625F" points="272.928081 42.4560068 260.14087 55.2513427 260.14087 96.8359663 272.928081 109.630431 282.518707 100.033711 272.928081 90.4378626"></polygon><polygon fill="#FF9566" points="272.928081 42.4560068 260.14087 55.2513427 260.14087 96.8359663 272.928081 90.4378626"></polygon><polygon fill="#FF625F" points="272.928081 42.4560068 282.518707 52.0527266 282.518707 100.033711 295.305046 87.2392465 295.305046 45.6546229 282.518707 32.859287"></polygon><polygon fill="#FF625F" points="390.015242 45.5753983 377.307292 32.8593742 367.716667 42.456094 377.228031 51.973502 367.716667 61.4909101 367.716667 42.456094 354.929456 55.2514298 354.929456 96.8351819 367.716667 109.630518 374.109836 103.232414 377.307292 100.033798 386.897047 90.4379497 383.700462 87.2393337 374.109836 96.8351819 367.716667 90.4379497 367.716667 67.8881422"></polygon><polygon fill="#FF9566" points="367.717015 42.4560068 367.717015 61.4908229 367.717015 42.4560068 354.928933 55.2513427 354.928933 96.8359663 367.717015 90.4378626 367.717015 67.888055"></polygon><polygon fill="#FF625F" points="98.1595459 42.4560068 85.3723351 55.2513427 85.3723351 96.8359663 98.1595459 109.630431 107.749301 100.033711 98.1595459 90.4378626"></polygon><polygon fill="#FF625F" points="120.536424 45.6545357 107.749214 32.8591999 98.1594588 42.4559197 107.749214 52.0526394 107.749214 100.034495 117.339839 109.630343 126.930465 100.034495 120.536424 93.6363915"></polygon><polygon fill="#FF9566" points="120.536424 45.6545357 107.749214 52.0526394 107.749214 100.034495 117.339839 109.630343 126.930465 100.034495 120.536424 93.6363915"></polygon><polygon fill="#FF625F" points="154.702082 96.8356177 148.308912 90.4375139 148.308912 42.4556582 135.521701 55.250994 135.521701 96.8356177 148.308912 109.630953 154.702082 103.23285 157.899538 100.034234 167.489292 90.4375139 164.292708 87.2388979"></polygon><polygon fill="#FF9566" points="148.308999 90.4376011 148.308999 42.4557453 135.521788 55.2510812 135.521788 96.8357048"></polygon><polygon fill="#FF625F" points="148.308999 42.3658006 157.899625 51.9625204 167.48938 42.3658006 157.899625 32.7690808"></polygon><polygon fill="#FF625F" points="200.498692 32.8595485 190.908066 42.4562683 200.498692 52.0521165 210.088447 42.4562683"></polygon><polygon fill="#FF625F" points="197.301323 68.0460684 197.301323 103.232588 203.695364 109.630692 210.088534 103.232588 210.088534 61.6479647 200.498779 52.0521165 190.908153 61.6479647"></polygon><polygon fill="#FF625F" points="190.90824 32.8595485 190.90824 16.864725 181.317614 7.26887681 171.72786 16.864725 178.121029 23.2628287 178.121029 103.232588 184.514199 109.630692 190.90824 103.232588 190.90824 61.6479647 190.90824 42.4562683"></polygon><polygon fill="#FF9566" points="190.90824 32.8595485 190.90824 16.864725 178.121029 23.2628287 178.121029 103.232588 184.514199 109.630692 190.90824 103.232588 190.90824 61.6479647 190.90824 42.4562683"></polygon><polygon fill="#FF625F" points="493.377208 42.4560068 502.888572 51.9734149 493.377208 61.4908229 493.377208 42.4560068 480.589997 55.2513427 480.589997 96.8359663 493.377208 109.630431 499.770378 103.232327 502.967834 100.033711 512.557589 90.4378626 509.361004 87.2392465 499.770378 96.8359663 493.377208 90.4378626 493.377208 67.888055 515.675783 45.5753112 502.967834 32.859287"></polygon><polygon fill="#FF9566" points="493.377208 61.4907357 493.377208 42.4559197 480.589997 55.2512555 480.589997 96.8358791 493.377208 90.4377754 493.377208 67.8879679"></polygon><polygon fill="#FF625F" points="415.650285 42.4560068 425.24004 52.0527266 434.830666 42.4560068 425.24004 32.859287"></polygon><polygon fill="#FF625F" points="396.469469 42.4560068 402.862639 48.853239 402.862639 58.4499587 402.862639 68.045807 402.862639 103.232327 409.25668 109.630431 415.64985 103.232327 415.64985 68.045807 415.64985 58.4499587 415.64985 42.4560068 406.060095 32.859287"></polygon><polygon fill="#FF9566" points="402.862552 48.8531518 402.862552 58.4498716 402.862552 68.0457198 402.862552 103.233111 409.256593 109.630343 415.650634 103.233111 415.650634 68.0457198 415.650634 58.4498716 415.650634 42.4559197"></polygon><polygon fill="#FF625F" points="524.248467 100.034147 533.839092 109.630866 543.428847 100.034147 533.839092 90.4374268"></polygon><polygon fill="#FF625F" points="553.019734 42.4560068 543.429108 32.859287 533.839354 42.4560068 543.429108 52.0527266"></polygon><polygon fill="#FF625F" points="524.248467 52.0525523 524.248467 64.8478881 543.428847 84.0395846 543.428847 100.034408 553.019473 90.4376883 553.019473 74.4437363 551.421181 72.8435567 543.428847 64.8478881 533.839092 55.2511683 533.839092 42.4558325"></polygon><polygon fill="#FF9566" points="524.248467 64.8475395 543.428847 84.0401075 553.019473 74.4442593 551.421181 72.8440797 543.428847 64.8475395 533.839092 55.2508197"></polygon><polygon fill="#FF9566" points="254.825045 32.8595485 232.448079 32.8595485 219.660869 45.6548844 229.251494 45.6548844 242.037834 45.6548844"></polygon></g></svg>
+
+
+      <h1 class="PageHeader-heading">
+        Event Organizer Kit
+      </h1>
+    </div>
+  </header>
+
+  <section class="Section">
+    <div class="Container">
+      <div class="Row u-flexCenter">
+        <div class="Column-8--medium">
+          <div class="long-form-content">
+            <h2>How to organize a Hacktoberfest-themed meetup</h2>
+
+<h3>Step-by-step</h3>
+
+<ol>
+<li>Craft an event agenda.</li>
+<li>Set a date: Confirm that your preferred venue and any co-organizers,
+speakers, and facilitators are available.</li>
+<li>Promote the event: Invite your community to attend. And don&#39;t forget to add
+your event <a href="http://do.co/hacktoberfest17events">here</a>!</li>
+<li>Facilitate the event: Create an open, inclusive, and welcoming atmosphere.</li>
+<li>Share special moments on social media. (Please remember to ask attendees
+permission to use their photos.)</li>
+</ol>
+
+<h3>Who to invite to the meetup</h3>
+
+<p>Anyone interested in learning about and/or contributing to open source.</p>
+
+<h3>When&#39;s the best time to host your meetup?</h3>
+
+<p>Preferably the first half of October to give participants time to complete four
+PRs!</p>
+
+<h3>Where to host your event</h3>
+
+<p>An easily accessible, inclusive location with reliable WiFi and a comfortable
+space that is workshop and live-coding friendly, for example:</p>
+
+<ul>
+<li>Classroom at a university or code school</li>
+<li>Coworking space</li>
+<li>Incubator/accelerator</li>
+<li>Office of an open source/tech company</li>
+<li>Anywhere that will have you!</li>
+</ul>
+
+<h3>Sample agenda</h3>
+
+<p>This is merely a suggestion — feel free to customize it to suit your community!</p>
+
+<p><strong>Welcome</strong></p>
+
+<p>Set a welcoming, open, and inclusive tone. Thank everyone for attending,
+tell them about yourself, and give an overview of the programming of the
+day/evening, and remind them of the code of conduct.</p>
+
+<p><strong>Intro to Hacktoberfest: the celebration, prizes, and instructions</strong></p>
+
+<p>It&#39;s important to mention the key points of Hacktoberfest, for example:
+”This is all about encouraging meaningful contributions to the open source
+ecosystem, for beginners and veterans alike.” See Intro to Hacktoberfest
+for details.</p>
+
+<p><strong>Intro to open source</strong></p>
+
+<p>See <a href="https://hacktoberfest.digitalocean.com/#resources">Resources section</a> for inspiration.</p>
+
+<p><strong>Workshop: how to contribute to open source</strong></p>
+
+<p>See <a href="https://hacktoberfest.digitalocean.com/#resources">Resources section</a> for inspiration.</p>
+
+<p><strong>Demos [optional; before/after hack time]</strong></p>
+
+<p>3–5 minute demos by anyone interested in sharing their open source projects.</p>
+
+<p><strong>Hack time</strong></p>
+
+<p>Hacking together: facilitate the formation of groups by
+interest/[insert your community&#39;s preferred format].</p>
+
+<h3>Speakers &amp; facilitators</h3>
+
+<p>You and your co-organizers are encouraged to facilitate the workshops! (You got
+it!) If you&#39;d like extra help, invite open source project owners/maintainers,
+leaders passionate about open source, and computer science educators who support
+open source in your community to come speak or help with meetup attendees. If
+there is an experienced open source enthusiast in your community, reach out to
+them via email or on Twitter! The worst that can happen is they&#39;re not able to
+attend :)</p>
+
+<h3>Photo sharing</h3>
+
+<p>Encourage event participants to share photos on social media using the
+hashtag #hacktoberfest. (Please be mindful of photo preferences of attendees —
+don&#39;t force camera shy individuals into photos!)</p>
+
+<p><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_cgvl-OW_W/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#Hacktoberfest</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by Coston (@costonperkins) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-18T19:49:42+00:00">Dec 18, 2015 at 11:49am PST</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script></p>
+
+<h3>Food &amp; drinks</h3>
+
+<p>Something delicious that your community will enjoy! Bonus: one or two items that
+add a festive <a href="https://www.pinterest.com/explore/fall-party-foods/">fall/autumn</a> or <a href="https://www.pinterest.com/explore/oktoberfest-party/">Oktoberfest</a> mood. Remember
+to account for food allergies, preferences, and local alcohol consumption laws
+(if alcohol is served).</p>
+
+<h3>Other fun ideas</h3>
+
+<ul>
+<li>First pull request of the evening to receive [insert prize].</li>
+<li>Raffle off 3–5 prizes to be given away at the end of the evening.</li>
+<li>Wrap up the event by inviting participants to share what they
+learned/worked on.</li>
+</ul>
+
+<h3>Event code of conduct</h3>
+
+<p>Hacktoberfest events are welcoming, open, and inclusive. Include this line on
+your event page: “Please read our <a href="https://docs.google.com/document/d/1gFKOhyUqMZzrZcbq8A_TpO5x9J9HK6agv70awCH8pyI/edit?usp=sharing">Events Code of Conduct</a> before
+attending. Happy hacking!”</p>
+
+<h2>Promoting your event</h2>
+
+<ol>
+<li>Share the event via email, social networks, and/or printed flyers. Consider
+posting on channels popular with developers and open source enthusiasts in
+your area, including but not limited to:
+
+<ul>
+<li>Meetup: your own Meetup page, or <a href="mailto:domeetups@digitalocean.com">contact us</a> if you&#39;d like to
+make it an official <a href="http://www.meetup.com/pro/digitalocean/">DigitalOcean meetup</a></li>
+<li>Twitter</li>
+<li>Facebook Pages</li>
+<li>LinkedIn Groups</li>
+<li>Google Groups</li>
+<li>Newsletters, websites, and social media accounts that share startup/tech
+events regularly</li>
+<li>Local Code Schools and Universities</li>
+</ul></li>
+<li>Add your meetup event <a href="http://do.co/hacktoberfest17events">here</a>.</li>
+</ol>
+
+<h3>Logos &amp; branding</h3>
+
+<p><strong>Social sharing</strong></p>
+
+<div class="u-flex u-flexCenter">
+  <a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-TWFB-02.png">
+    <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-TWFB-02.png" alt="">
+  </a>
+  <a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-TWFB-03.png"
+     class="u-ml--medium">
+    <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-TWFB-03.png" alt="">
+  </a>
+</div>
+
+<p><strong>Promotional banners</strong></p>
+
+<p><a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-728x90-01.png"
+   class="u-block u-mb--medium">
+  <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-728x90-01.png" alt="">
+</a>
+<a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-728x90-03.png"
+   class="u-block u-mb--medium">
+  <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-728x90-03.png" alt="">
+</a>
+<a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-728x90-02.png"
+   class="u-block u-mb--medium">
+  <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-728x90-02.png" alt="">
+</a></p>
+
+<div class="u-flex u-flexCenter">
+  <a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-250x250-01.png">
+    <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-250x250-01.png" alt="">
+  </a>
+  <a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-250x250-02.png"
+     class="u-ml--medium">
+    <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-250x250-02.png" alt="">
+  </a>
+</div>
+
+<p><strong>Email headers</strong></p>
+
+<p><a href="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-Email-01.png">
+  <img src="https://nyc3.digitaloceanspaces.com/hacktoberfest/Hacktoberfest17-Email-01.png" alt="">
+</a></p>
+
+<h3>Sample copy for your event page</h3>
+
+<p><strong>Event name ideas</strong></p>
+
+<ul>
+<li>Hacktoberfest Open Hack Night</li>
+<li>Hacktoberfest Open Hack Day</li>
+<li>Hacktoberfest in [Your City]!</li>
+<li>Hacktoberfest Open Hack Fest!</li>
+</ul>
+
+<p><strong>Description</strong></p>
+
+<p>It&#39;s Hacktoberfest 2017! Let&#39;s celebrate open source over food, drinks,
+learning, and great company!</p>
+
+<p><strong>Agenda</strong></p>
+
+<p>[Time] [Topic]<br>
+[Time] [Topic]<br>
+[Time] [Topic]<br>
+[Time] [Topic]</p>
+
+<p><strong>What&#39;s Hacktoberfest?</strong></p>
+
+<p>Hacktoberfest—brought to you by DigitalOcean and GitHub—is a month-long
+celebration of open source software. Maintainers are invited to guide would-be
+contributors towards issues that will help move the project forward, and
+contributors get the opportunity to give back to both projects they like, and
+ones they&#39;ve just discovered. No contribution is too small—bug fixes and
+documentation updates are valid ways of participating.</p>
+
+<p>Can&#39;t make it to this event? Hacktoberfest is virtual and open to participants
+from around the globe. <a href="https://hacktoberfest.digitalocean.com/">Sign up to participate today</a>.</p>
+
+<p><strong>Rules and Prizes</strong></p>
+
+<p>First sign up on the Hacktoberfest site. If you open up four pull requests
+between October 1 and October 31, you&#39;ll win a free, limited edition
+Hacktoberfest T-shirt. (Pull requests do not have to be merged and accepted; as
+long as they&#39;ve been opened between the very start of October 1 and the very end
+of October 31, they count towards a free T-shirt.)</p>
+
+<p>Connect with other Hacktoberfest participants (Hacktobefestants?) by using the
+hashtag, #Hacktoberfest, on your social media platform of choice.</p>
+
+<p>New to DigitalOcean? Receive USD $10 in infrastructure credit at
+<a href="https://do.co/hacktoberfest17">do.co/hacktoberfest17</a>.</p>
+
+<h2>Resources</h2>
+
+<h3>Git</h3>
+
+<ul>
+<li><a href="https://try.github.io/levels/1/challenges/1">Learn the basics of Git in 15 minutes</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github">How To Create a Pull Request on GitHub</a></li>
+<li><a href="https://github.com/github/training-kit">GitHub Training Kit</a>: Open source slides, workbook, and
+cheat sheet courseware for teaching Git and GitHub classes</li>
+<li><a href="https://services.github.com/resources/">Git cheat sheets</a> in multiple languages</li>
+<li><a href="https://guides.github.com/introduction/flow/">Understanding the GitHub Flow</a></li>
+<li><a href="https://services.github.com/training/">GitHub training sessions and webcasts</a></li>
+<li><a href="http://patchwork.github.io/">Patchwork</a>: Casual, mentored workshops for beginners to Git and
+GitHub</li>
+<li><a href="https://services.github.com/resources/">More resources from GitHub</a></li>
+</ul>
+
+<h3>Open Source</h3>
+
+<p><a href="http://opensource.guide/getting-started/">Open source 101</a></p>
+
+<h3>Where to find Open Source projects to work on?</h3>
+
+<p><a href="https://help.github.com/articles/where-can-i-find-open-source-projects-to-work-on/">GitHub</a></p>
+
+<p><a href="https://hacktoberfest.digitalocean.com/#projects">Hacktoberfest</a></p>
+
+<p>Find more resources and useful tips for participants on the
+<a href="https://hacktoberfest.digitalocean.com/#resources">Hacktoberfest site</a>.</p>
+
+<h2>FAQs</h2>
+
+<p><strong>Why organize a Hacktoberfest-themed meetup?</strong></p>
+
+<ul>
+<li>Increase awareness of open source in your community</li>
+<li>Enjoy contributing to open source in a social setting</li>
+<li>Meet project owners, maintainers, contributors, and community members in
+person</li>
+<li>Learn about the open source ecosystem: from how to start an open source
+project, to marketing your project, sustaining growth, and troubleshooting
+and maintenance</li>
+</ul>
+
+<p><em>Organizers: set the tone for your event based on what most benefits your
+community! Feel free to focus on any combination of the above, and more!</em></p>
+
+<p><strong>How do I sign up for Hacktoberfest?</strong></p>
+
+<p>Register with your GitHub credentials at
+<a href="https://hacktoberfest.digitalocean.com/">hacktoberfest.digitalocean.com</a>.</p>
+
+<p><strong>When can I start?</strong></p>
+
+<p>You can sign up anytime between October 1 and October 31.</p>
+
+<p><strong>Who can participate in Hacktoberfest?</strong></p>
+
+<p>Hacktoberfest is open to everyone in our global community!</p>
+
+<p><strong>What are the rules?</strong></p>
+
+<p>To win a shirt, you must sign up on the Hacktoberfest site and make four pull
+requests on GitHub by October 31st. (Pull requests do not have to be merged and
+accepted; as long as they&#39;ve been opened between the very start of October 1 and
+the very end of October 31, they count towards a free T-shirt.)</p>
+
+<p><strong>Where can I make pull requests?</strong></p>
+
+<p>Pull requests can be made in any GitHub-hosted repositories/projects.</p>
+
+<p><strong>What if I don&#39;t complete four pull requests by October 31st?</strong></p>
+
+<p>Everyone who participates receives limited-edition Hacktoberfest
+stickers—regardless if you complete the four pull requests or not.</p>
+
+<p><strong>Have questions?</strong></p>
+
+<p>Get in touch with our team by sending an email to
+<a href="mailto:hacktoberfest@digitalocean.com">hacktoberfest@digitalocean.com</a>.</p>
+
+          </div>
+
+          <hr>
+
+          <div class="u-textCenter u-mt--xlarge">
+            <a class="Button Button--outline u-ma--small" href="https://do.co/venue">Donate your venue</a>
+
+            <a class="Button Button--outline u-ma--small" href="https://do.co/hacktoberfest17event">Add your event</a>
+
+            <a class="Button Button--outline u-ma--small" href="https://do.co/hacktoberfest17events">See all Hacktoberfest events</a>
+          </div>
+
+          <div class="u-flex u-flexCenter u-mt--xlarge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="399" height="82" viewBox="0 0 399 82" role="img" aria-labelledby="j2vzrjqwmo0nln8myt3j4zzsqaw8jo5"><title id="j2vzrjqwmo0nln8myt3j4zzsqaw8jo5">Happy Hacking</title><g fill="#FF9566" fill-rule="evenodd"><path d="M329.844 31.666l-4.15 3.866v26.886l4.164 4.162 4.164-4.162 6.246-6.24-2.082-2.08-4.164 4.16V35.532M362.988 30.387l-3.827 1.77v30.26l4.163 4.164 4.164-4.162 6.246-6.24-2.082-2.08-4.163 4.16v-29.21M269.482 31.21v27.047l8.328 8.323 4.164-4.16 2.082-2.082 6.246-6.242-2.084-2.08-6.244 6.24-4.164-4.16v-31.21"></path><path d="M290.302 22.887l-6.246-6.242-6.247 6.242 6.246 6.242M384.426 22.807l8.37 8.364 6.247-6.24-8.37-8.365M246.58 22.887l-8.327 8.323v27.048l8.328 8.323 6.247-6.24-6.246-6.243"></path><path d="M261.154 24.967l-8.328-8.323-6.244 6.243 6.244 6.242v31.21l6.246 6.24 6.246-6.24-4.164-4.163M352.702 29.174l-8.328-8.323-6.244 6.243 6.244 6.243v29.25l3.997 3.994 6.247-6.24-1.915-1.914M309.038 16.645l-6.246 6.242 6.246 6.243 6.246-6.243M327.756 16.645l-6.246 6.242 6.246 6.243 6.246-6.243M306.957 39.532V62.42l4.164 4.16 4.165-4.16V35.37l-6.246-6.24-6.247 6.24M325.62 39.532V62.42l4.165 4.16 4.164-4.16V35.37l-6.247-6.24-6.246 6.24"></path><path d="M325.62 39.532V62.42l4.165 4.16 4.164-4.16V35.37l-6.247-6.24-6.246 6.24M296.548 0l-6.246 6.24 4.162 4.162V62.42l4.166 4.16 4.162-4.16V6.24M217.434 0l-6.246 6.24 4.164 4.162v10.353l-10.41 10.403V6.24L198.695 0l-4.213 4.213-2.03 2.028-6.247 6.243 2.082 2.082 6.246-6.242 2.08 2.08v52.016l4.164 4.16 4.165-4.16v-27.1l10.41-10.404v33.342l8.328 8.323 4.162-4.16 2.082-2.08 4.165-4.163-2.084-2.08-4.164 4.16-4.162-4.16V6.242M353.89 27.952l6.247 6.242 7.356-5.133-7.356-7.35M93.688 22.887l-6.246-6.242-6.247 6.242 4.164 4.16V76.98l4.164 4.163 4.164-4.162V66.58l6.244-6.243 4.164-4.16 4.164-4.16v-27.05l-8.328-8.322-6.244 6.242zm0 16.645V22.886l6.244 6.243v22.886l-6.244 6.24V39.533zM124.917 22.887l-6.246-6.242-6.245 6.242 4.164 4.16V76.98l4.163 4.163 4.164-4.162V66.58l6.244-6.243 4.165-4.16 4.165-4.16v-27.05l-8.33-8.322-6.243 6.242zm0 16.645V22.886l6.244 6.243v22.886l-6.243 6.24V39.533zM149.9 72.822l-8.328 8.323h10.41l8.327-8.323M154.064 16.645l-8.328 8.323v33.29l8.328 8.322 6.246-6.24-6.246-6.243M160.31 60.34v12.483l8.328-8.323V16.644l-8.328 8.323M380.23 72.822l-8.33 8.323h10.41l8.33-8.323M384.394 22.922l-8.328 8.323V58.26l8.328 8.32 6.246-6.242-6.246-6.24M390.64 60.338v12.484l8.328-8.323V25.027l-8.328-.06M60.376 22.887l-8.328 8.323v27.048l8.328 8.323 6.246-6.24-6.246-6.243"></path><path d="M74.95 24.967l-8.33-8.323-6.243 6.243 6.244 6.242v31.21l6.248 6.24 6.246-6.24-4.164-4.163M31.23 0l-6.247 6.24 4.164 4.162v10.353l-10.41 10.403V6.24L12.49 0 8.278 4.213 6.247 6.24 0 12.484l2.082 2.082 6.246-6.242 2.08 2.08v52.016l4.167 4.16 4.162-4.16v-27.1l10.41-10.404v33.342l8.328 8.323 4.163-4.16 2.082-2.08 4.164-4.163-2.08-2.08-4.166 4.16-4.163-4.16V6.242"></path></g></svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+    <script src="https://go.digitalocean.com/js/forms2/js/forms2.min.js"></script>
+    <script src="/assets/application-0030e4846b4b5e7113ed423c357321a26e9b560ba9efdf385720f8205ea80ded.js"></script>
+  </body>
+</html>
